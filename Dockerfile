@@ -1,10 +1,5 @@
 FROM ubuntu:16.04
 
-# proxy setup
-ENV http_proxy http://web-proxy.corp.hpecorp.net:8080
-ENV https_proxy http://web-proxy.corp.hpecorp.net:8080
-ENV no_proxy localhost,127.0.0.0/8,127.0.1.1,127.0.1.1
-
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -qq -y --fix-missing sudo software-properties-common git libxext-dev libxrender-dev libxslt1.1 \
