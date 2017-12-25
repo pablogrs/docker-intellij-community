@@ -42,8 +42,7 @@ RUN echo 'Downloading IntelliJ IDEA' && \
     rm /tmp/intellij.tar.gz
 
 RUN chmod +x /opt/intellij/bin/idea.sh && \
-    chown developer:developer -R /opt/intellij && \
-    chown developer:developer -R /etc/pki/java/
+    chown developer:developer -R /opt/intellij
 
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
